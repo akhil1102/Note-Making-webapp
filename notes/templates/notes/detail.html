@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+    <style>
+        .detail{
+            margin:auto;
+            width:70%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1><a href="notes/all/">Home</a> </h1>
+
+<div class="detail">
+    <h1>{{ instance.title }}</h1><br><small><a href="/notes/delete/{{ instance.id }}">Delete</a></small>
+    <h2>{{ instance.body }}</h2>
+</div>
+
+</body>
+</html>

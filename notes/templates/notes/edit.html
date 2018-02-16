@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<form action="/notes/all/ method="post">
+    <input type="text" name="updated_title" value={{ p.title }}>Title<br>
+    <input type="text" name="updated_body" value={{ p.body }}>Body<br>
+    <input type="submit" name="update" value="update">
+</form>
+
+</body>
+</html>

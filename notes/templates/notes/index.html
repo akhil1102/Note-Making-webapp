@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NOTES</title>
+</head>
+<body>
+        <table name="note-table">
+          <tr>
+              <th>Title</th>
+              <th>Body</th>
+          </tr>
+          {% for o in objects %}
+          <tr>
+              <td>{{ o.title }}</td>
+              <td>{{ o.body }}</td>
+              <td><a href="/notes/edit/{{ o.id }}">Edit</a></td>
+          </tr>
+          {% endfor %}
+      </table>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<div lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/notes.css' %}">
+</head>
+
+    <body style=" background-color: #99bffc;">
+<h1>{{ title }}</h1>
+<br>
+        <!--<div id="title"><a href="/notes/detail/{{ o.id }}/">{{ o.title }}</a>-->
+        <!--</div>-->
+    <div class="container">
+        <div class="row">
+            <div class="card-deck">
+                {% for o in objects_list %}
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h2 class="card-title"> <a href="/notes/detail/{{ o.id }}/">{{ o.title }}</a></h2>
+                    <h2 class="card-text">{{ o.body }}<small><a href="/notes/edit/{{ o.id }}">Edit</a></small></h2>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
